@@ -19,6 +19,16 @@ end
 #  erb :index
 #end
 
+class Lead < ActiveRecord::Base
+  self.table_name = 'salesforce.Lead'
+end
+
+#get "/lead" do
+#  @Lead = Lead.all
+#  erb :index
+#end
+
+
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
   match = /(.*?)\.herokuapp\.com/.match(request.host)
